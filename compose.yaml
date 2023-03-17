@@ -1,0 +1,12 @@
+services:
+  cockroachdb:
+    image: cockroachdb/cockroach
+    ports:
+      - "26257:26257"
+      - "8080:8080"
+    environment:
+      COCKROACH_USER: cockroach
+      COCKROACH_PASSWORD: 1234
+    volumes:
+      - ./data/cockroachdb:/cockroach/cockroach-data
+    command: start-single-node --accept-sql-without-tls
