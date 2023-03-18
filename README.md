@@ -9,7 +9,7 @@ docker compose up -d
 ## Connection string
 
 ```
-postgres://cockroach:1234@localhost:26257/<database>
+postgresql://root@localhost:26257/DATABASE?sslmode=disable
 ```
 
 ## SQL Console
@@ -20,4 +20,4 @@ docker compose exec -it cockroachdb cockroach sql --insecure
 
 ## Web Console
 
-https://localhost:8080/
+http://localhost:8080/
